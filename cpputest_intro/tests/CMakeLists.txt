@@ -2,6 +2,7 @@ enable_language(CXX)
 
 add_executable(Test_Intro
     RunAllTests.cpp
+    Test_Minimum.cpp
 )
 target_link_libraries(Test_Intro
     PRIVATE
