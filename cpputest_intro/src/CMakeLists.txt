@@ -6,7 +6,10 @@ target_include_directories(production
     PUBLIC "${CMAKE_HOME_DIRECTORY}/include"
 )
 if(COMPILE_TESTS)
-    # Pass a preprocessor option to enable CppUTest's memory leak detection
+    # To enable CppUTest's memory leak detection,
+    # pass a preprocessor option to include a specific header file and
+    # link against the CppUtest library.
+    # See http://cpputest.github.io/manual.html#memory_leak_detection
     target_compile_options(production
         PRIVATE -include CppUTest/MemoryLeakDetectorMallocMacros.h
     )
