@@ -7,16 +7,10 @@ extern "C"
 
 TEST_GROUP(memory)
 {
-    void setup()
-    {
-    }
-
-    void teardown()
-    {
-    }
 };
 
-TEST(memory, catches_memory_leaks)
+TEST(memory, catches_memory_leak)
 {
-    memory_leak(12);
+    // Uncomment this to see a memory leak
+    // memory_leak(12);
 }
