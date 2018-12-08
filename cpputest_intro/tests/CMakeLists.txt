@@ -1,15 +1,15 @@
 enable_language(CXX)
 
-add_executable(Test_Intro
-    RunAllTests.cpp
-    Test_Minimum.cpp
+add_executable(test_cpputest_intro
+    run_all_tests.cpp
+    test_minimum.cpp
 )
-target_link_libraries(Test_Intro
+target_link_libraries(test_cpputest_intro
     PRIVATE
         CppUTest
 )
 # Configure CTest
 add_test(
-    NAME Test_Intro
-    COMMAND Test_Intro
+    NAME test_cpputest_intro
+    COMMAND test_cpputest_intro
 )

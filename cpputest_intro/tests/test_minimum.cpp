@@ -1,10 +1,10 @@
 #include "CppUTest/TestHarness.h"
 
-TEST_GROUP(Minimum)
+TEST_GROUP(minimum)
 {
 };
 
-TEST(Minimum, wiring_check)
+TEST(minimum, wiring_check)
 {
     FAIL("Wiring check");
 }
