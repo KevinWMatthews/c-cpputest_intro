@@ -2,5 +2,5 @@
 
 bool is_42(int value)
 {
-    return 0;
+    return value == 42;
 }

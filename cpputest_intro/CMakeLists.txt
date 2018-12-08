@@ -14,3 +14,5 @@ if(COMPILE_TESTS)
     find_package(CppUTest 3.8 REQUIRED)
     add_subdirectory(tests)
 endif()
+
+add_subdirectory(src)

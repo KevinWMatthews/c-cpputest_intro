@@ -18,6 +18,6 @@ TEST_GROUP(module)
 
 TEST(module, can_be_42)
 {
-    int input = 43;
-    // CHECK_TRUE(is_42(input));
+    int input = 42;
+    CHECK_TRUE(is_42(input));
 }
