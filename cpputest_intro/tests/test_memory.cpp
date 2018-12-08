@@ -16,7 +16,7 @@ TEST_GROUP(memory)
     }
 };
 
-TEST(memory, wiring_check)
+TEST(memory, catches_memory_leaks)
 {
-    FAIL("wiring check");
+    memory_leak(12);
 }

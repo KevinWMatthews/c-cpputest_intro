@@ -7,7 +7,7 @@ add_executable(test_cpputest_intro
     test_memory.cpp
 )
 target_link_libraries(test_cpputest_intro
-    PRIVATE CppUTest module::module
+    PRIVATE CppUTest production::production
 )
 # Configure CTest
 add_test(
