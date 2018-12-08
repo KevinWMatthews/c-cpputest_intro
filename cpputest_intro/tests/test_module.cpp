@@ -16,7 +16,8 @@ TEST_GROUP(module)
     }
 };
 
-TEST(module, wiring_check)
+TEST(module, can_be_42)
 {
-    FAIL("Wiring check");
+    int input = 43;
+    // CHECK_TRUE(is_42(input));
 }
