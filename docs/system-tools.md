@@ -78,8 +78,9 @@ $ ./bin/test_cpputest_intro -c
 
 ## Production Build
 
-It is important to have a separate production build. This will not include
-memory leak checks, mocks, overrides, etc.
+It is important to distinguish between test and production builds. Unit tests
+often override behavior of production code with mocks, custom functions, and
+memory leak checks.
 
 
 ### Configure and Compile

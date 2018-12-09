@@ -1,6 +1,2 @@
-# Ignore out-of-tree build directories
-build/
-build_test/
-
 # Ignore environment files
-.env
+*.env
