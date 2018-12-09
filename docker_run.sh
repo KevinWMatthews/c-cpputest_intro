@@ -55,10 +55,10 @@ fi
 container_name=${CONTAINER_NAME:?Must specify CONTAINER_NAME as an environment variable}
 userid=${USERID:=$(id --user)}
 groupid=${GROUPID:=$(id --group)}
-src_path_host=${SRC_PATH_HOST:=?Must specify SRC_PATH_HOST as environment variable}
-build_path_host=${BUILD_PATH_HOST:=?Must specify BUILD_PATH_HOST as environment variable}
-src_path_target=${SRC_PATH_TARGET:=?Must specify SRC_PATH_TARGET as environment variable}
-build_path_target=${BUILD_PATH_TARGET:=?Must specify BUILD_PATH_TARGET as environment variable}
+src_path_host=${SRC_PATH_HOST:?Must specify SRC_PATH_HOST as environment variable}
+build_path_host=${BUILD_PATH_HOST:?Must specify BUILD_PATH_HOST as environment variable}
+src_path_target=${SRC_PATH_TARGET:?Must specify SRC_PATH_TARGET as environment variable}
+build_path_target=${BUILD_PATH_TARGET:?Must specify BUILD_PATH_TARGET as environment variable}
 
 command="docker run
     --rm --name ${container_name}
