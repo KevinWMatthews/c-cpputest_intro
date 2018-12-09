@@ -71,7 +71,7 @@ To run individual test executables, run:
 $ ./bin/test_cpputest_intro
 ```
 
-I prefer to colorize the output with:
+I prefer to colorize the tests' output with:
 ```bash
 $ ./bin/test_cpputest_intro -c
 ```
@@ -95,5 +95,5 @@ $ make
 
 ### Run Production Code
 
-This project is designed to illustrate unit testing. It contains a library of
-production code but no executables.
+This project illustrates unit testing on a library so there are no production
+executables to run.
