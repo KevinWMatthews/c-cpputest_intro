@@ -13,7 +13,7 @@ Configure with CMake. Run with Docker.
 This project demonstrates how to compile an application against the unit testing
 framework CppUTest. It features two compilation methods:
 
-  * system tools
+  * Your system's [CMake and gcc](system-tools.md)
   * Docker
 
 
@@ -76,5 +76,5 @@ The structure of the source code directory is:
 
 For detailed build instructions, see one of the following:
 
-  * system tools
+  * [CMake/gcc](system-tools.md)
   * Docker
