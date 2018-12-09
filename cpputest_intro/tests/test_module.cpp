@@ -7,17 +7,10 @@ extern "C"
 
 TEST_GROUP(module)
 {
-    void setup()
-    {
-    }
-
-    void teardown()
-    {
-    }
 };
 
-TEST(module, can_be_42)
+TEST(module, must_be_42)
 {
     int input = 42;
-    CHECK_TRUE(is_42(input));
+    CHECK_TRUE(module_is_42(input));
 }

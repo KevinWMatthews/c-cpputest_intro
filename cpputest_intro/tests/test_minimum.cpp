@@ -4,7 +4,7 @@ TEST_GROUP(minimum)
 {
 };
 
-TEST(minimum, wiring_check)
+TEST(minimum, this_test_can_fail)
 {
     // Uncomment this to see a failing test
     // FAIL("Wiring check");

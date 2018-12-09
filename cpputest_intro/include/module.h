@@ -3,6 +3,6 @@
 
 #include <stdbool.h>
 
-bool is_42(int value);
+bool module_is_42(int value);
 
 #endif
