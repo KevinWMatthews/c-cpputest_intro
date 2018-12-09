@@ -21,6 +21,22 @@ to persist after the container is stopped.
 
 ## Setup
 
+You can pull a pre-built image from
+[DockerHub](https://hub.docker.com/r/kevinwmatthews/cpputest-gcc-cmake/)
+or build your own.
+
+### Pull Docker Image
+
+```bash
+$ docker pull kevinwmatthews/cpputest-gcc-cmake
+```
+
+I like to tag the image with a name that is easy to remember:
+```bash
+$ docker tag kevinwmatthews/cpputest-gcc-cmake cpputest
+```
+
+
 ### Build Docker Image
 
 The syntax for building a Docker image is:
