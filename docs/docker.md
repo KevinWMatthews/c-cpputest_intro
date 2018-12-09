@@ -32,7 +32,9 @@ Specify the directory that contains the Dockerfile, not the Dockerfile itself.
 I prefer to tag the image very specifically in order to track changes and then
 generate a user-friendly tag for use at the command line:
 ```bash
-$ docker build --tag cpputest:3.8-2b45d38 Dockerfiles/
+# Build CMake and CppUTest images - not yet available on Docker hub
+$ docker build --tag gcc8-cmake:3.13.1 Dockerfiles/cmake/
+$ docker build --tag cpputest:3.8-2b45d38 Dockerfiles/cpputest/
 $ docker tag cpputest:3.8-2b45d38 cpputest
 ```
 
