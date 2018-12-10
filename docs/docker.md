@@ -3,12 +3,18 @@ layout: page
 title: Docker
 ---
 
-Use Docker configure, compile, and test.
+Use Docker to configure, compile, and test.
 
 ## Background
 
-The provided `Dockerfile` will build a Docker image that has CMake, gcc, and
-CppUTest installed. It can be used to easily compile and test code.
+The provided
+[Dockerfiles](https://github.com/KevinWMatthews/c-cpputest_intro/tree/master/Dockerfiles)
+will build two Docker images:
+
+  * CMake and gcc
+  * CMake, gcc, and CppUTest
+
+These can be used to easily compile both production and test code.
 
 The source and build directories are bind-mounted to the container. This
 allows source code changes to be made on the host and easily compiled in the
@@ -30,11 +36,13 @@ pull an image from DockerHub or build your own.
 Pull a pre-built image from
 [DockerHub](https://hub.docker.com/r/kevinwmatthews/cpputest-gcc-cmake/):
 ```bash
+$ docker pull kevinwmatthews/gcc-cmake:8-3.13.1
 $ docker pull kevinwmatthews/cpputest-gcc-cmake:v3.8-2b45d38
 ```
 
-I like to tag the image with a name that is easy to remember:
+I like to tag each image with a name that is easy to remember:
 ```bash
+$ docker tag kevinwmatthews/gcc-cmake:8-3.13.1 cmake
 $ docker tag kevinwmatthews/cpputest-gcc-cmake:v3.8-2b45d38 cpputest
 ```
 
@@ -50,8 +58,8 @@ Specify the directory that contains the Dockerfile, not the Dockerfile itself.
 I prefer to tag the image very specifically in order to track changes and then
 generate a user-friendly tag for use at the command line:
 ```bash
-# Build CMake and CppUTest images - not yet available on Docker hub
-$ docker build --tag gcc8-cmake:3.13.1 Dockerfiles/cmake/
+$ docker build --tag gcc-cmake:8-3.13.1 Dockerfiles/cmake/
+$ docker tag gcc-cmake:8-3.13.1 cmake
 $ docker build --tag cpputest:3.8-2b45d38 Dockerfiles/cpputest/
 $ docker tag cpputest:3.8-2b45d38 cpputest
 ```
@@ -141,8 +149,10 @@ absolute paths.
 
 Run the container with:
 ```bash
-$ ENV_FILE=production.env ./docker_run.sh cpputest
+$ ENV_FILE=production.env ./docker_run.sh cmake
 ```
+You can also build with the `cpputest` image, but using the `cmake` image
+guarantees that no test code can accidentally be shipped.
 
 Once inside the container, configure using:
 ```bash

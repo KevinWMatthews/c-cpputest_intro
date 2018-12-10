@@ -1,4 +1,4 @@
-FROM gcc8-cmake:3.13.1 as build_cpputest
+FROM gcc-cmake:8-3.13.1 as build_cpputest
 
 WORKDIR /usr/src
 RUN git clone https://github.com/cpputest/cpputest.git
@@ -7,7 +7,7 @@ RUN git checkout 2b45d38c5c3dd71447bfe0ae993786a6da898658
 RUN cmake -DC++11=ON -DTESTS=OFF ..
 RUN make && make install
 
-FROM gcc8-cmake:3.13.1
+FROM gcc-cmake:8-3.13.1
 
 WORKDIR /usr/local/include/
 COPY --from=build_cpputest /usr/local/include/CppUTest/ ./CppUTest/
