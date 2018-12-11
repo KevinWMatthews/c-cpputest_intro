@@ -17,4 +17,7 @@ if(COMPILE_TESTS)
         PRIVATE CppUTest
     )
 endif()
+target_compile_options(production
+    PRIVATE "-Wall"
+)
 add_library(production::production ALIAS production)
