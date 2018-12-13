@@ -60,8 +60,8 @@ generate a user-friendly tag for use at the command line:
 ```bash
 $ docker build --tag gcc-cmake:8-3.13.1 Dockerfiles/cmake/
 $ docker tag gcc-cmake:8-3.13.1 cmake
-$ docker build --tag cpputest:3.8-2b45d38 Dockerfiles/cpputest/
-$ docker tag cpputest:3.8-2b45d38 cpputest
+$ docker build --tag cpputest:v3.8-2b45d38 Dockerfiles/cpputest/
+$ docker tag cpputest:v3.8-2b45d38 cpputest
 ```
 
 
